@@ -1,0 +1,132 @@
+🤖 Agentic AI – Notes & Concepts
+
+This repository contains concise notes on Agentic AI, covering workflows, autonomy levels, design patterns, evaluations, and real-world applications.
+
+
+What is Agentic AI?
+An Agentic AI workflow is a process where an **LLM-based application executes multiple steps autonomously** to complete a task, often involving decision-making, tool usage, and reasoning across steps.
+
+Disciplined Development Workflow
+* Emphasizes structured, modular, and evaluable agent design
+* Encourages traceability, error analysis, and iterative improvement
+
+Agentic Workflow
+* LLM executes **multiple sequential or parallel steps**
+* Uses **tools, APIs, and external data**
+* Can dynamically adapt its actions based on intermediate results
+
+Degrees of Autonomy
+
+1. Less Autonomous
+  * Example: Essay writing using LLM + web search
+  * All steps are predefined
+  * Tool usage is hard-coded
+  * Autonomy exists only in text generation
+
+ 2. Semi-Autonomous
+  
+  * Agent can make limited decisions
+  * Tools are predefined
+  * Partial flexibility in execution
+
+ 3. More Autonomous
+  * LLM decides when and how to:
+  
+    * Perform web search
+    * Query news or arXiv
+    * Fetch PDFs and convert to text
+  * Agent:
+  
+    * Makes many decisions independently
+    * Can write new functions/tools dynamically
+
+ Benefits of Agentic AI
+
+* Parallelism
+  → Multiple LLMs can work simultaneously
+
+* Modularity
+  → Components can be reused, replaced, or improved independently
+
+Applications of Agentic AI
+
+ 1. Invoice Processing
+PDF → Text Extraction → LLM → Database Update → Record Creation
+ 2. Customer Email Response
+Email → LLM verifies order → Database query → LLM drafts response → Human review
+3. Customer Service Agents
+  * End-to-end autonomous support systems
+  * Tool + database + reasoning integration
+4. Visual Computer Use
+  * Agent navigates webpages dynamically
+  * Performs step-by-step reasoning while interacting with UI elements
+
+Task Decomposition
+  * Break a complex task into multiple smaller steps
+  * Sequence execution logically to form a workflow
+
+Building Blocks
+
+1. Models
+  * LLMs for:
+    * Text generation
+    * Tool use
+  * Other AI models for:
+    * PDF-to-text
+    * Image analysis
+
+2. Tools
+  * Web search APIs (real-time data)
+  * Database access
+  * RAG systems for information retrieval
+
+3. Code Execution
+  * Execute scripts for validation, transformation, or automation
+
+Evaluation of Agentic Systems
+
+1. Manual Evaluation
+   * Identify weak points and errors in outputs
+
+2. Objective Evaluation
+   * Automated, code-based checks
+
+3. Subjective Evaluation
+   * Use an LLM as a *judge* to determine correctness
+   * Avoid strict 1–5 scale ratings (LLMs perform poorly here)
+
+4. Trace-Based Analysis
+   * Examine each step taken by the agent
+   * Useful for debugging and backtracking
+
+ Agentic Design Patterns
+
+ 1. Reflection
+  * LLM evaluates its own output
+  * Example:
+      * Generate code → Critique → Debug → Re-run
+  * Can use:
+      * Same LLM
+    * Separate **Critic Agent**
+
+ 2. Tool Use
+
+  * Web search
+  * Code execution
+  * Database queries
+
+ 3. Planning
+
+  * LLM decides:
+      * Action sequence
+    * API calls
+  * More flexible but **harder to control**
+
+ 4. Multi-Agent Workflow
+  * Multiple agents collaborate
+  * Produces better outputs
+  * Increased complexity and control challenges
+
+
+
+
